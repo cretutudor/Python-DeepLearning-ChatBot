@@ -1,0 +1,54 @@
+<FloatLayout>
+
+    canvas:
+        Color:
+            rgb: 0.263, 0.263, 0.263
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+    button: button
+    text: text
+    text_out: text_out
+
+    TextInput:
+        id: text
+        size_hint: 0.8, 0.2
+        pos_hint: {"x":0, "y":0}
+        multiline: False
+        focus: True
+
+    TextInput:
+        id: text_out
+        size_hint: 0.5, 0.5
+        pos_hint: {"x":0, "y":0.5}
+        readonly: True
+        multiline: True
+
+    Button:
+        id: button
+        background_normal: ''
+        background_color: 0.392, 0.953, 0.835, 1
+        front_color: 0.4, 0.4, 0.4, 1
+        font_size: 25
+        text: "Trimite"
+        size_hint: 0.2, 0.198
+        pos_hint: {"x":0.8, "y":0}
+        on_press: root.apasare_buton()
+        on_release: root.text.focus = True
+
+    Label:
+        font_size: 20
+        text: "Scrieti un mesaj:"
+        pos_hint: {"x": 0.04, "y": 0.145}
+        size_hint: None, None
+
+    Image:
+        pos_hint: {"x":0.5, "y":0.3}
+        size_hint: 0.5, 0.5
+        source: 'robot2.png'
+
+
+
+
